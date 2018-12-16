@@ -15,7 +15,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 	}
 
 	public Vet save(Vet object) {
-		return super.save(object.getId(), object);
+		return super.save(object);
 	}
 
 	public Set<Vet> findAll() {
