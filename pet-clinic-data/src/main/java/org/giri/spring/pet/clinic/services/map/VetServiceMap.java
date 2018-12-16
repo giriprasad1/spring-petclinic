@@ -4,9 +4,11 @@ import java.util.Set;
 
 
 import org.giri.spring.pet.clinic.model.Vet;
-import org.giri.spring.pet.clinic.services.CrudService;
+import org.giri.spring.pet.clinic.services.VetService;
+import org.springframework.stereotype.Service;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+@Service
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	public Vet findById(Long Id) {
 		return super.findById(Id);
