@@ -19,7 +19,9 @@ public class AbstractMapService<T extends BaseEntity, ID extends Long> {
 	T save(T object) {
 		if (object != null) {
 			if (object.getId() == null) {
-				map.put(this.getMaxId(), object);
+				Long id = this.getMaxId();
+				object.setId(id);
+				map.put(id, object);
 			}
 		} else {
 			throw new RuntimeException("Entity cannot be null");
